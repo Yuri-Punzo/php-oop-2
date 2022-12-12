@@ -8,4 +8,15 @@ class Category
     {
         $this->category = $category;
     }
+
+    public function productCategoryIcon($category)
+    {
+        if ($category->category = "cani") {
+            return "bau";
+        } elseif ($category->category = "gatti") {
+            return "miao";
+        } else {
+            die("solo cani o gatti");
+        }
+    }
 }

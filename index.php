@@ -20,8 +20,8 @@ require __DIR__ . "/models/Category.php";
 require __DIR__ . "/models/Type.php";
 
 $products = [
-    $lettieraPerGatti = new Product("https://m.media-amazon.com/images/I/61nz0M6JqtL._AC_UL320_.jpg", "Lettiera per Gatti", 63, "gatti", "prodotto"),
-    $ossoGiocattolo = new Product()
+    $lettieraPerGatti = new Product("https://m.media-amazon.com/images/I/61nz0M6JqtL._AC_UL320_.jpg", "Lettiera per Gatti", 63, new Category("gatti"), new Type("prodotto")),
+    $ossoGiocattolo = new Product("https://m.media-amazon.com/images/I/71aSf2AiBNL._AC_SX679_.jpg", "Osso Giocattolo", 25, new Category("cani"), new Type("giocattolo"))
 ];
 
 ?>
@@ -54,7 +54,7 @@ $products = [
                             <!-- /price -->
                             <div><?= $product->productCategoryIcon($product->category) ?></div>
                             <!-- /productCategoryIcon() -->
-                            <p><?= $product->type ?></p>
+                            <p><?= $product->type->type ?></p>
                             <!-- /type -->
                         </div>
                     </div>
