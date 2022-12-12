@@ -45,15 +45,16 @@ $products = [
             <?php foreach ($products as $product) : ?>
                 <div class="col-6">
                     <div class="card">
-                        <div class="card-body">
-                            <img src="<?= $product->image ?>" alt="">
+                        <div class="card-body" style="height: 600px;">
+                            <img style="width:200px" src="<?= $product->image ?>" alt="">
                             <!-- /image -->
                             <h2><?= $product->title ?></h2>
                             <!-- /title -->
                             <div><?= $product->price ?></div>
                             <!-- /price -->
-                            <div><?= $product->productCategoryIcon($product->category) ?></div>
-                            <!-- /productCategoryIcon() -->
+
+                            <img style="width:100px" src="<?= $product->category->category ?>" alt="">
+                            <!-- /CategoryIcon -->
                             <p><?= $product->type->type ?></p>
                             <!-- /type -->
                         </div>
