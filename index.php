@@ -8,31 +8,19 @@ Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, 
 icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
 
 BONUS (Opzionale):
-Il cliente potrà sia comprare i prodotti come ospite, senza doversi registrarsi nello store, oppure può iscriversi e creare un account per ricevere cosi il 20% di sconto.
-Il cliente effettua il pagamento dei prodotti nel carrello con la carta di credito, che non deve essere scaduta.
+- Il cliente potrà sia comprare i prodotti come ospite, senza doversi registrarsi nello store,
+oppure può iscriversi e creare un account per ricevere cosi il 20% di sconto.
+- Il cliente effettua il pagamento dei prodotti nel carrello con la carta di credito, che non deve essere scaduta.
 -->
 
 <?php
-class Product
-{
-    public $image;
-    public $title;
-    public $price;
-    public $category;
-    public $type;
-
-    function __construct(string $image, string $title, $price, Category $category, string $type)
-    {
-        $this->image = $image;
-        $this->image = $title;
-        $this->image = $price;
-        $this->image = $category;
-        $this->image = $type;
-    }
-}
+require __DIR__ . "/models/Product.php";
+require __DIR__ . "/models/User.php";
+require __DIR__ . "/models/Category.php";
+require __DIR__ . "/models/Type.php";
 
 $products = [
-    $lettieraPerGatti = new Product(),
+    $lettieraPerGatti = new Product("https://m.media-amazon.com/images/I/61nz0M6JqtL._AC_UL320_.jpg", "Lettiera per Gatti", 63, "gatti", "prodotto"),
     $ossoGiocattolo = new Product()
 ];
 

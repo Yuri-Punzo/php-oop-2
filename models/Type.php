@@ -1,5 +1,10 @@
 <?php
-
-class Type extends Product
+class Type
 {
+    public $type;
+
+    function __construct(string $type)
+    {
+        $this->type = $type;
+    }
 }
