@@ -1,10 +1,7 @@
 <?php
-
-class Category
+trait construct1
 {
-    public $category;
-
-    function __construct(string $category)
+    public function __construct(string $category)
     {
         if ($category == "cani") {
             $this->category = "https://p.kindpng.com/picc/s/169-1693411_cats-dogs-cats-and-dogs-heart-shaped-svg.png";
@@ -15,3 +12,25 @@ class Category
         }
     }
 }
+class Category
+{
+    public $category;
+
+    use construct1;
+}
+
+
+/* <?php
+trait message1 {
+  public function msg1() {
+    echo "OOP is fun! "; 
+  }
+}
+
+class Welcome {
+  use message1;
+}
+
+$obj = new Welcome();
+$obj->msg1();
+?> */
