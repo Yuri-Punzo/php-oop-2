@@ -11,7 +11,7 @@ class Category
         } elseif ($category == "gatti") {
             $this->category = "https://www.shutterstock.com/shutterstock/photos/1530020042/display_1500/stock-vector-cat-icon-flat-vector-isolated-on-transparent-background-1530020042.jpg";
         } else {
-            die;
+            throw new Exception('Si può scegliere solo fra "cani" e "gatti"');
         }
     }
 }
