@@ -15,8 +15,8 @@ class Category
         }
     }
 }
-try {
+/* try {
     echo __construct(string $category);
     } catch (Exception $e) {
     echo 'Eccezione: ' . $e->getMessage();
-    }
+    } */
